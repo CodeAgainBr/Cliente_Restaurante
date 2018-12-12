@@ -1,22 +1,11 @@
-function mesas_index(){
+function mesa_index(){
 	$.ajax({
 		url: "http://api-restaurante.herokuapp.com/api/v1/mesas.json",
-		success: function(resposta){
-			mesas = resposta;
-		}
+		async: false
 	});
 }
 
-function mesa_show(id){
-	$.ajax({
-		url: "http://api-restaurante.herokuapp.com/api/v1/mesas/"+id+".json",
-		success: function(resposta){
-			mesas = resposta;
-		}
-	});
-}
-
-function mesa_set(id){
+function mesa_in(id){
 	$.ajax({
 		url: "http://api-restaurante.herokuapp.com/api/v1/mesas/"+id+".json",
 		method: "put",
@@ -24,9 +13,6 @@ function mesa_set(id){
 			mesa:{
 				status: true
 			}
-		},
-		success: function(resposta){
-			mesas = resposta;
 		}
 	});
 }
@@ -39,9 +25,16 @@ function mesa_out(id){
 			mesa:{
 				status: false
 			}
-		},
-		success: function(resposta){
-			mesas = resposta;
 		}
 	});
 }
+
+$(document).ajaxComplete(function(event, xhr, settings) {
+  if (settings.url === "http://api-restaurante.herokuapp.com/api/v1/mesas.json") { //Index
+    mesas = xhr.responseJSON;
+
+  	for (var i = 0; i < mesas.length; i++) {
+			$("select").append("<option>"+mesas[i].numero+"</option>");
+		}
+  }
+});
