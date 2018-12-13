@@ -16,6 +16,21 @@ function pedido_index(){
 	pedido_success();
 }
 
+function pedido_create(){
+	$.ajax({
+		url: "http://api-restaurante.herokuapp.com/api/v1/pedidos.json",
+		method: "post",
+		data: {
+			pedido:{
+				
+			}
+		},
+		success: function(){
+			sessionStorage.setItem('mesa', id);
+		}
+	});
+}
+
 function remover_carrinho(id){
 	carrinho.push(id);
 	sessionStorage.setItem('carrinho', carrinho);
