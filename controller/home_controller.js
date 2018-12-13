@@ -13,6 +13,9 @@ function mesa_in(id){
 			mesa:{
 				status: true
 			}
+		},
+		success: function(){
+			sessionStorage.setItem('mesa', id);
 		}
 	});
 }
@@ -25,6 +28,9 @@ function mesa_out(id){
 			mesa:{
 				status: false
 			}
+		},
+		success: function(){
+			sessionStorage.setItem('mesa', "");
 		}
 	});
 }

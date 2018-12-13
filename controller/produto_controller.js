@@ -9,6 +9,7 @@ function produto_index(){
 
 function add_carrinho(id){
 	carrinho.push(id);
+	sessionStorage.setItem('carrinho', carrinho);
 }
 
 $(document).ajaxComplete(function(event, xhr, settings) {
