@@ -23,7 +23,6 @@ function pedido_index(){
 
 function pedido_finalizar(){
 	pedido_create();
-
 }
 
 function pedido_create(){
@@ -36,7 +35,10 @@ function pedido_create(){
 			}
 		},
 		success: function(xhr){
-			sessionStorage.setItem('pedido', xhr.responseJSON[0].id)
+			sessionStorage.setItem('pedido', xhr.responseJSON[0].id);
+			for(i = 0; i < sessionStorage('carrinho').length; i++){
+				item_create(sessionStorage('carrinho')[i][0], sessionStorage('carrinho')[i][1], xhr.responseJSON[0].id);
+			}
 		}
 	});
 }

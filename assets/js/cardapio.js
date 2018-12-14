@@ -5,7 +5,11 @@ $(document).ready(function(){
 	$("#back").click(function(){
 		voltar();
 		window.location = "home.html";
-	})
+	});
+
+	$("#carrinho").click(function(){
+		window.location = "pedido.html";
+	});
 });
 
 function modal(i){

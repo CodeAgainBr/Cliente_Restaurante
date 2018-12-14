@@ -1,6 +1,15 @@
 $(document).ready(function(){
 	let pedidos = 0;
 	pedido_index();
+
+	$("#back").click(function(){
+		window.location = "cardapio.html";
+	});
+
+	$("#finalizar-pedido").click(function(){
+		pedido_finalizar();
+		window.location = "fim.html";
+	});
 });
 
 function modal(i){
