@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>home</title>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
-	<script src="../controller/pedido_controller.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="../assets/css/global.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<h1>Pedido</h1>
+	<section>
+		<div id="main-row" class="row" style="z-index: 1 !important">
+			<div class="col-12 pr-0">
+				<div id="main-card" class="card">
+					<nav class="navbar navbar-expand-lg navbar-light bg-success text-white px-0">
+						<i class="voltar fa fa-arrow-circle-left"></i>
+						<a id="navbar-title" class="text-uppercase text-white mr-auto" href="#">Carrinho</a>
+					</nav>					
+					<div id="transparent-card" class="card ml-2"></div>
+					<div id="divider-carrinho"></div>																																				
+					<div id="footer" class="bg-success text-white">
+						<div class="row">
+							<p id="valor-total">R$249,00</p>
+							<button id="finalizar-pedido" type="button" class="btn btn-white text-uppercase  text-success ml-auto">Finalizar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-	<div class='pedido'>
-	</div>
+		<div class="modal fade" id="modal-pedido" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content"></div>
+			</div>
+		</div>
+	</section>
 </body>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="../controller/pedido_controller.js"></script>
+<script src="../assets/js/pedido.js"></script>
 </html>
-
-<script>
-	$(document).ready(function(){
-		let pedido;
-		pedido_index();
-	});
-</script>

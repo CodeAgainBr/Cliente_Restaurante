@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>home</title>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
-	<script src="../controller/home_controller.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="../assets/css/global.css">
 </head>
 <body>
-	<h1>Bem vindo ao restaurante ...</h1>
-	<select id="#select_mesa">
-		<option>Selecione sua mesa:</option>
-	</select>
-	<button onclick="">Confirmar</button>
+	<section>
+		<div class="row no-gutters w-100" style="height: 100vh">
+			<div id="home" class="col-12">
+				<div id="main-card" class="card">
+					<div class="card-title text-center mb-0">
+						<h1 class="titulo px-2">Seja bem vindo a Code Again!</h1>
+					</div>
+					<div>
+						<fieldset>
+							<div class="col-12">
+								<select id="escolherMesa" class="form-control">
+									<option>Selecione uma mesa</option>
+								</select>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="col-12">
+								<button id="botaoEscolher" type="submit" onclick="entrar()" class="btn btn-success btn-block text-uppercase">Pronto</button>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script src="../assets/js/home.js"></script>
+	<script src="../controller/home_controller.js"></script>
 </html>
-
-<script>
-	$(document).ready(function(){
-		let mesas = 0;
-		mesa_index();
-	});
-</script>

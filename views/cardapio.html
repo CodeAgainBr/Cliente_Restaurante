@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>home</title>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
-	<script src="../controller/produto_controller.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="../assets/css/global.css">
 </head>
 <body>
-	<h1>Cardapio</h1>
+	<section>
+		<div id="main-row" class="row">
+			<div class="col-12 pr-0">
+				<div id="main-card" class="card">
+					<nav class="navbar navbar-expand-lg navbar-light bg-success text-white px-0">
+						<i id="back" class="voltar fas fa-arrow-circle-left"></i>
+						<a id="navbar-title" class="text-uppercase text-white">Cardápio</a>
+						<i id="carrinho" class="fas fa-shopping-cart ml-auto mr-4"></i>
+					</nav>					
+					<div id="transparent-card" class="card ml-2"></div>
+					<div id="divider-pratos"></div>
+				</div>
+			</div>
+		</div>
 
-	<div class='cardapio'>
-	</div>
+		<div class="modal fade" id="modal-pedido" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content"></div>
+			</div>
+		</div>
+	</section>
+
+
 </body>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="../assets/js/global.js"></script>
+<script src="../assets/js/cardapio.js"></script>
+<script src="../controller/cardapio_controller.js"></script>
 </html>
-
-<script>
-	$(document).ready(function(){
-		let produtos = 0;
-		produto_index();
-	});
-</script>

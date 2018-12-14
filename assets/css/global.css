@@ -1,0 +1,172 @@
+* {
+	overflow-x: hidden !important;
+}
+
+.navbar {
+	position: fixed !important;
+	width: 100%;
+	z-index: 2;
+}
+
+#main-row {
+	height: 100%;
+}
+
+#main-card {
+	background-image: url("../images/fundo.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	border: none;
+	border-radius: 0px;
+	background-color: black;
+}
+
+.card-title {
+	color: #F5F5F5;
+	text-shadow: 1px 2px black;
+}
+
+#transparent-card {
+	background: rgba(54, 25, 25, .4);
+	height: 95%;
+	width: 95%;
+	margin-top: 70px;
+}
+
+#transparent-card-concluido {
+	background: rgba(54, 25, 25, .4);
+	height: 95%;
+	width: 95%;
+}
+
+.titulo {
+	margin-top: 50px;
+}
+
+.titulo-concluido {
+	font-size: 37px;
+	text-shadow: 1px 1px black;
+	margin-top: 50px;
+}
+
+.concluido-mensagem {
+	font-size: 32px;
+	text-shadow: 2px 2px black;	
+	margin-top: 50px;
+}
+
+#botaoNovoPedido {
+	font-size: 20px;
+	width: 80%;
+	font-weight: 500;
+	margin-top: 150px;
+	margin-bottom: 45px;
+}
+
+#escolherMesa {
+	margin-top: 70px;
+}
+
+#botaoEscolher {
+	margin-top: 200px;
+	font-size: 30px;
+	font-weight: 500;
+	border-radius: 5px !important;
+}
+
+.prato-img {
+	margin-left: 10px;
+	height: 75px;
+	width: 70px;
+	border-radius: 10px !important;
+}
+
+.prato-img-modal {
+	height: 200px;
+	width: 200px;
+	border-radius: 10px !important;
+}
+
+.prato-nome {
+	margin-left: 5px;
+	font-size: 18px;
+	text-shadow: 1px 2px black;
+	font-weight: 500;
+}
+
+.prato-detalhes {
+	font-weight: 500;
+	margin-left: 5px;
+	font-size: 13px;
+	text-shadow: 1px 2px black;
+	margin-bottom: 3px !important;
+}
+
+.prato-valor {
+	margin-left: 5px;
+	text-shadow: 1px 1px black;
+	width: 100%;
+}
+
+.prato-adicionar {
+	margin-left: 5px;
+	text-shadow: 1px 1px black;
+}
+
+.item {
+	width: 95%;
+	height: 100px;
+	background: rgba(255, 255, 255, .2);
+	border-radius: 5px;
+	overflow-y: hidden;
+}
+
+#carrinho {
+	font-size: 40px;
+}
+
+#navbar-title {
+	font-weight: 500;
+	font-size: 23px;
+}
+
+#footer {
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	z-index: 2;
+	bottom: 0;
+}
+
+#valor-total {
+	font-weight: 500;
+	font-size: 30px;
+	margin-left: 22px;
+	margin-top: 5px;
+}
+
+#finalizar-pedido {
+	font-weight: bolder;
+	margin-top: 10px;
+	margin-right: 25px;
+	height: 40px;
+}
+
+#divider-carrinho {
+	margin-bottom: 75px;
+}
+
+#divider-pratos {
+	margin-bottom: 15px;
+}
+
+.voltar {
+	font-size: 35px !important;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.va-auto {
+	vertical-align: middle;
+}
