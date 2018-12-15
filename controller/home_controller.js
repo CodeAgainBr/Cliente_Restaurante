@@ -1,6 +1,6 @@
 function mesa_index(){
 	$.ajax({
-		url: "http://api-restaurante.herokuapp.com/api/v1/mesas.json",
+		url: "http://api-restaurante-vinicius.herokuapp.com/api/v1/mesas.json",
 		async: false
 	});
 }
@@ -13,7 +13,7 @@ function entrar(){
 
 function mesa_in(id){
 	$.ajax({
-		url: "http://api-restaurante.herokuapp.com/api/v1/mesas/"+id+".json",
+		url: "http://api-restaurante-vinicius.herokuapp.com/api/v1/mesas/"+id+".json",
 		method: "put",
 		async: false,
 		data: {
@@ -28,7 +28,7 @@ function mesa_in(id){
 }
 
 $(document).ajaxComplete(function(event, xhr, settings) {
-  if (settings.url === "http://api-restaurante.herokuapp.com/api/v1/mesas.json") { //Index
+  if (settings.url === "http://api-restaurante-vinicius.herokuapp.com/api/v1/mesas.json") { //Index
     mesas = xhr.responseJSON;
 
   	for (var i = 0; i < mesas.length; i++) {
