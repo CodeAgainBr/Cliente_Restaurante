@@ -6,7 +6,7 @@ function pedido_index(){
 
 	for(i in carrinho){
 		$.ajax({
-			url: "http://api-restaurante.herokuapp.com/api/v1/produtos/"+i.id+".json",
+			url: "http://http://api-restaurante-vinicius.herokuapp.com/api/v1/produtos/"+i.id+".json",
 			async: false,
 			success: function(xhr){
 				pedidos.push(xhr.responseJSON[0]);
@@ -27,7 +27,7 @@ function pedido_finalizar(){
 
 function pedido_create(){
 	$.ajax({
-		url: "http://api-restaurante.herokuapp.com/api/v1/pedidos.json",
+		url: "http://api-restaurante-vinicius.herokuapp.com/api/v1/pedidos.json",
 		method: "post",
 		data: {
 			pedido:{
@@ -45,7 +45,7 @@ function pedido_create(){
 
 function item_create(produto, quantidade, pedido){
 	$.ajax({
-		url: "http://api-restaurante.herokuapp.com/api/v1/itens.json",
+		url: "http://http://api-restaurante-vinicius.herokuapp.com/api/v1/itens.json",
 		method: "post",
 		data: {
 			item: {
