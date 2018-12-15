@@ -2,7 +2,7 @@ let carrinho = [];
 
 function produto_index(){
 	$.ajax({
-		url: "http://api-restaurante.herokuapp.com/api/v1/produtos.json",
+		url: "http://api-restaurante-vinicius.herokuapp.com/api/v1/produtos.json",
 		async: false
 	});
 }
@@ -17,7 +17,7 @@ function add_carrinho(id){
 }
 
 $(document).ajaxComplete(function(event, xhr, settings) {
-  if (settings.url === "http://api-restaurante.herokuapp.com/api/v1/produtos.json") { //Index
+  if (settings.url === "http://api-restaurante-vinicius.herokuapp.com/api/v1/produtos.json") { //Index
     produtos = xhr.responseJSON;
 
   	for (var i = 0; i < produtos.length; i++) {
