@@ -1,6 +1,6 @@
 function mesa_out(id){
 	$.ajax({
-		url: "http://api-restaurante.herokuapp.com/api/v1/mesas/"+id+".json",
+		url: "http://api-restaurante-vinicius.herokuapp.com/api/v1/mesas/"+id+".json",
 		method: "put",
 		data: {
 			mesa:{
